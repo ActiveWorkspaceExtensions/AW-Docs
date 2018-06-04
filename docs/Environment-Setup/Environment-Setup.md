@@ -3,7 +3,7 @@
 ## Visual Studio Code
 To Start out, we need a place to write code and use the command line. Don't worry. Visual Studio Code will make this much easier. Download [Visual Studio Code](https://code.visualstudio.com/). 
 
-[![Download VS Code](images/VSCode.png "Download VS Code")](https://code.visualstudio.com/)
+[![Download VS Code](VSCode.png "Download VS Code")](https://code.visualstudio.com/)
 
 ## Node.js
 [Node.js](https://nodejs.org/) is a platform for building fast and scalable server applications using JavaScript. Node.js is the runtime and [NPM](https://www.npmjs.com/) is the Package Manager for Node.js modules.
@@ -32,11 +32,11 @@ code .
 
 From the File Explorer tool bar, press the New File button:
 
-![File Explorer New File](images/toolbar-new-file.png)
+![File Explorer New File](toolbar-new-file.png)
 
 and name the file `app.js`:
 
-![File Explorer app.js](images/app-js-file-created.png)
+![File Explorer app.js](app-js-file-created.png)
 
 By using the `.js` file extension, VS Code interprets this file as JavaScript and will evaluate the contents with the JavaScript language service.
 
@@ -49,11 +49,11 @@ console.log(msg);
 
 Note that when you typed `console.` IntelliSense on the `console` object was automatically presented to you.
 
-![console IntelliSense](images/consoleintellisense.png)
+![console IntelliSense](consoleintellisense.png)
 
 Also notice that VS Code knows that `msg` is a string based on the initialization to `'Hello World'`.  If you type `msg.` you'll see IntelliSense showing all of the string functions available on `msg`.
 
-![string IntelliSense](images/stringintellisense.png)
+![string IntelliSense](stringintellisense.png)
 
 After experimenting with IntelliSense, revert any extra changes from the source code example above and save the file (`kb(workbench.action.files.save)`).
 
@@ -73,7 +73,7 @@ VS Code has an [integrated terminal](https://code.visualstudio.com/docs/editor/i
 
 **View** > **Integrated Terminal** (`kb(workbench.action.terminal.toggleTerminal)` with the backtick character) will open the integrated terminal and you can run `node app.js` there:
 
-![integrated terminal](images/integrated-terminal.png)
+![integrated terminal](integrated-terminal.png)
 
 ## Express.js
 
@@ -93,13 +93,13 @@ The `-g` switch installs the Express Generator globally on your machine so you c
 
 We need to download [Java 7 JDK 1.7.0_17](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html) for the scripts to run.
 
-[![Java 7 JDK 1.7.0_17](images/jdk.png)](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html)
+[![Java 7 JDK 1.7.0_17](jdk.png)](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html)
 
 Now that we have that installed, we need to set our JAVA_HOME path, so the scripts know where it is.
 
  - Right click My Computer and select Properties.
- - On the Advanced tab, select Environment Variables ![Environment shot 1](images/env_1.png)
- - and then edit JAVA_HOME to point to where the JDK software is located, for example, C:\Program Files\Java\1.7.0_17.![Environment shot 1](images/env_2.png)
+ - On the Advanced tab, select Environment Variables ![Environment shot 1](env_1.png)
+ - and then edit JAVA_HOME to point to where the JDK software is located, for example, C:\Program Files\Java\1.7.0_17.![Environment shot 1](env_2.png)
 
 If you have any issues, Oracle has an article on [Installing the JDK Software and Setting JAVA_HOME](https://docs.oracle.com/cd/E19182-01/821-0917/inst_jdk_javahome_t/index.html)
 
@@ -109,21 +109,21 @@ Make a new folder that will contain all of our code. I like having all of my pro
  - Navigate to the directory to make a new folder.
  - `mkdir newproject`
  - `cd newproject`
- - `code .` will open the project in VS Code ![Create Folder](images/newDir.jpg)
+ - `code .` will open the project in VS Code ![Create Folder](newDir.jpg)
 
 ### Active Workspace Code
 Now we need the Active Workspace code inside of this project.
 
 Go to TC_ROOT/aws2/stage/src/out/war/assets<numbers>/
 
-Copy the `stage` folder and paste into your New Project directory. I have found that due to the size of the folder, It helped to zip it up before copy and pasting. Then expand the zip in the folder. ![path](images/path.png)
+Copy the `stage` folder and paste into your New Project directory. I have found that due to the size of the folder, It helped to zip it up before copy and pasting. Then expand the zip in the folder. ![path](path.png)
 
 ### Update Proxy Server
 Open the `stage/build/express.js` file in VS Code.
 
-![express.js file](images/expressjs.png)
+![express.js file](expressjs.png)
 
-![proxy 3.4](images/34.jpg)
+![proxy 3.4](34.jpg)
 
 Change the URLs to the TC Server. While we can run Active Workspace locally, we still need TeamCenter connected for all of the data.
 
@@ -139,6 +139,6 @@ You may want to take a minute and grab a coffee. This will take a few minutes to
 
 Once everything is completed, run `express.cmd`
 
-![Run Express](images/run.jpg)
+![Run Express](run.jpg)
 
 Now you have your own local Active Workspace deployment that you can play around with… To make changes on the fly utilize your custom modules and run `warRefresh.cmd` from the terminal to see your changes automagically.

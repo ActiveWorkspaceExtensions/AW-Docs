@@ -84,14 +84,14 @@ extra_javascript:
 pages:
   - Home: index.md
   - Getting Started: 
-    - Environment Setup: Environment-Setup.md
-    - My First Extension: My-First-Extension.md
+    - Environment Setup': Environment-Setup/Environment-Setup.md
+    - My First Extension: My-First-Extension/My-First-Extension.md
   - Examples:
-    - Location Example: Location-Example.md
+    - Location Example: Location-Example/Location-Example.md
   - Extensions:
-    - InboxLinkcmdGlobal: InboxLinkcmdGlobal.md
-    - HomeFolderLinkcmdGlobal: HomeFolderLinkcmdGlobal.md
-    - QuickLinksCmdPanel: QuickLinksCmdPanel.md
+    - InboxLinkcmdGlobal: InboxLinkcmdGlobal/InboxLinkcmdGlobal.md
+    - HomeFolderLinkcmdGlobal: HomeFolderLinkcmdGlobal/HomeFolderLinkcmdGlobal.md
+    - QuickLinksCmdPanel: QuickLinksCmdPanel/QuickLinksCmdPanel.md
   - Docs:
-    - What is Declarative: What-is-Declarative.md  
+    - What is Declarative: What-is-Declarative/What-is-Declarative.md  
 

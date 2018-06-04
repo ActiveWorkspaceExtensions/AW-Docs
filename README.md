@@ -1,89 +1,209 @@
 # Active Workspace Extentions Docs Starter
 
-#### This Project was forked from [Gatsby Docs Starter](https://github.com/ericwindmill/gatsby-starter-docs)
-
 # Getting started
 
 ## Check your development environment
 
 Git - If you need to install Git [download from here](https://git-scm.com/). You can also download the [GitHub Desktop App](https://desktop.github.com/) for the point and click people. If you aren't sure... you should probably install it> If nothing else it can't hurt to get the newest version
 
-Let's check first that you have everything set up to start creating with Gatsby.
-You will need a recent version of Node.js installed.
-
-Node.js is a programming tool for running JavaScript on servers and in your
-computer's terminal. Gatsby is built using Node.js.
-
 Open a terminal window. We are big fans of VS Code. It has a terminal built in! Check out [Visual Studio Code](https://code.visualstudio.com/). See
 [terminal instructions for Mac users](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/) and
-[terminal instructions for Windows users](https://www.quora.com/How-do-I-open-terminal-in-windows). In your terminal window, type `node --version` and hit ENTER, then `npm --version` and hit ENTER (tip: to run a specified command, you must type the command into your terminal and then press ENTER. Then the command will run).
+[terminal instructions for Windows users](https://www.quora.com/How-do-I-open-terminal-in-windows). 
 
-You should see something like:
+Let's check to see if you have the following installed. Follow the list to check if if it is install and then what version you have:
+```bash
+# Check Node
+$ node --version
+v8.11.1
+# Check NPM
+$ npm --version
+5.6.0
+# Check Python
+$ python --version
+Python 2.7.2
+# Check PIP
+$ pip --version
+pip 1.5.2
+```
 
-![Check if node.js/npm is installed](static/check-versions.png)
-
-Gatsby supports versions of Node back to v6 and npm to v3.
+Pip is a package installer for Python. MkDocs supports Python versions 2.7, 3.4, 3.5, 3.6 and pypy.
 
 If you don't have Node.js installed, go to https://nodejs.org/ and install the
 recommended version for your operating system.
+
+## Installing Python
+
+Install [Python] by downloading an installer appropriate for your system from
+[python.org] and running it.
+
+!!! Note
+
+    If you are installing Python on Windows, be sure to check the box to have
+    Python added to your PATH if the installer offers such an option (it's
+    normally off by default).
+
+    ![Add Python to PATH](img/win-py-install.png)
+
+[python.org]: https://www.python.org/downloads/
+
+## Installing pip
+
+If you're using a recent version of Python, the Python package manager, [pip],
+is most likely installed by default. However, you may need to upgrade pip to the
+lasted version:
+
+```bash
+pip install --upgrade pip
+```
+
+If you need to install [pip] for the first time, download [get-pip.py].
+Then run the following command to install it:
+
+```bash
+python get-pip.py
+```
+
+## Installing MkDocs
+
+Install the `mkdocs` package using pip:
+
+```bash
+pip install mkdocs
+```
+
+You should now have the `mkdocs` command installed on your system. Run `mkdocs
+--version` to check that everything worked okay.
+
+```bash
+$ mkdocs --version
+mkdocs, version 0.15.3
+```
+
+!!! Note
+    If you are using Windows, some of the above commands may not work
+    out-of-the-box.
+
+    A quick solution may be to preface every Python command with `python -m`
+    like this:
+
+        python -m pip install mkdocs
+        python -m mkdocs
+
+    For a more permanent solution, you may need to edit your `PATH` environment
+    variable to include the `Scripts` directory of your Python installation.
+    Recent versions of Python include a script to do this for you. Navigate to
+    your Python installation directory (for example `C:\Python34\`), open the
+    `Tools`, then `Scripts` folder, and run the `win_add2path.py` file by double
+    clicking on it. Alternatively, you can [download][a2p] the script and run it
+    (`python win_add2path.py`).
+
+[a2p]: https://svn.python.org/projects/python/trunk/Tools/scripts/win_add2path.py
+
+---
+
+## Installing The Material Theme
+
+[Material requires MkDocs >= 0.17.1](http://www.mkdocs.org).
+
+#### using pip
+
+Material can be installed with `pip`:
+
+``` sh
+pip install mkdocs-material
+```
+
+## Additional Extension Installs
+These should be added when you install Material, but just to be on the safe side use pip to install `pymdown-extentions` and `pygments`.
+
+``` sh
+pip install pymdown-extensions
+```
+
+``` sh
+pip install pygments
+```
+
 
 ## Clone the Repo
 
 If you are using the terminal, type the line below in the directory you want the site to live:
 
 ```
-git clone https://github.com/ActiveWorkspaceExtensions/AW-Docs-Site.git
+git clone https://github.com/ActiveWorkspaceExtensions/AW-Docs.git
 ```
 You can also clone the repo from the GitHub Desktop App.
 
 Open the directory ```AW-Docs-Site``` in your terminal.
 
-## Install Gatsby Dependancies
 
-Unfortunatly we aren't talking about that great Leonardo DiCaprio movie. Gatsby is a static site generator used to convert easy to make [Markdown](https://www.markdownguide.org/getting-started) files into great looking web pages. First install Gatsby's command line program by running the following:
+## Now the Fun Part
+MkDocs comes with a built-in dev-server that lets you preview your documentation
+as you work on it. Make sure you're in the same directory as the `mkdocs.yml`
+configuration file, and then start the server by running the `mkdocs serve`
+command:
 
-```sh
-npm install --global gatsby-cli
+```bash
+$ mkdocs serve
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+[I 160402 15:50:43 server:271] Serving on http://127.0.0.1:8000
+[I 160402 15:50:43 handlers:58] Start watching changes
+[I 160402 15:50:43 handlers:60] Start detecting changes
 ```
 
-Next we are going to get all the packages needed to run the site. Run:
+Open up `http://127.0.0.1:8000/` in your browser, and you'll see the Active Workspace Docs Site is displayed.
 
-```sh
-nmp install
+## How To Work In MKDOCS
+There's a single configuration file named `mkdocs.yml`, and a folder named
+`docs` that will contain your documentation source files. The folder named `site` is the built site that needs to be commited to the [ActiveWorkspaceExtensions.github.io](https://github.com/ActiveWorkspaceExtensions/ActiveWorkspaceExtensions.github.io) repo.
+
+New pages go in their own folder in the `docs` directory. Add images in the page directory. An example would be `![express.js file](expressjs.png)`. 
+
+Add pages the same fashion as the other pages in the `mkdocs.yml` file:
+
+![pages](pages.jpg)
+
+## Building the site
+
+That's looking good. You're ready to deploy the first pass of your `MkLorum`
+documentation. First build the documentation:
+
+```bash
+mkdocs build
 ```
 
-Grab a drink while you wait.
+This will create a new directory, named `site`.
 
-## Running locally
+After some time, files may be removed from the documentation but they will still
+reside in the `site` directory. To remove those stale files, just run `mkdocs`
+with the `--clean` switch.
 
-To build the site and start the local dev server type:
-
-Gatsby has a built-in development server. Let's start it up by running the
-following command:
-
-```sh
-gatsby develop
+```bash
+mkdocs build --clean
 ```
 
-You should shortly see some text, close to the bottom, that says `The development server is listening at:` [http://localhost:8000](http://localhost:8000). Open that address in your
-browser and...
+## Other Commands and Options
 
-Yeah! It's working!!!
+There are various other commands and options available. For a complete list of
+commands, use the `--help` flag:
 
-Too cool 😎
+```bash
+mkdocs --help
+```
 
-Gatsby's development server is a "hot reloading" server, meaning any change you
-make to your React.js page components (and later we'll learn, your data files)
-will be immediately visible and/or loaded in the browser.
+To view a list of options available on a given command, use the `--help` flag
+with that command. For example, to get a list of all options available for the
+`build` command run the following:
 
-This is huge because it makes development so much faster and fun.
+```bash
+mkdocs build --help
+```
 
-## Extra Commands
 
-- You can chack the ```package.josn``` file for the scripts. 
-- ```npm clean``` will clean out the public file and anything built.
-- ```gatsby build``` will do a full production build of the site. There will be a ```public``` folder that is compressed and contains all of the static files. The contents of this folder is what the ```ActiveWorkspaceExtensions.github.io``` repo holds. Any changes need to be pushed to that folder from a fresh build.
-- I have a script that will automatically do that, ```npm deploy```. The only issue is that it uses the current directory as the repo location.
+
+
+
 
 ## Markdown Help
 
