@@ -1,0 +1,90 @@
+# Project information
+site_name: Active Workspace Extensions
+site_description: Customize Active Workspce with Extensions
+site_author: Siemens
+site_url: https://activeworkspaceextensions.github.io/
+
+# Repository
+repo_name: ActiveWorkspaceExtensions/AW-Docs-Site
+repo_url: https://github.com/ActiveWorkspaceExtensions/AW-Docs-Site
+edit_uri: ""
+
+# Copyright
+copyright: 'Copyright &copy; 2018 Siemens'
+
+# Configuration
+theme:
+  name: material
+
+
+ # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  feature:
+    tabs: true
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: 'images/favicon.ico'
+  logo: 'images/mytc.svg'
+
+# Social
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/ActiveWorkspaceExtensions'
+    - type: 'twitter'
+      link: 'https://twitter.com/SiemensPLM'  
+
+# Google Analytics
+google_analytics:
+  - 'UA-120272199-1'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - toc:
+      permalink: true
+  - footnotes
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Overrides
+extra_css:
+  - 'stylesheets/extra.css'
+extra_javascript:
+  - 'javascripts/extra.js'    
+
+# Pages
+pages:
+  - Home: index.md
+  - Getting Started: 
+    - Getting Started: about.md
+  - Tutorials:
+    - 1st Tutorial: about.md
+
