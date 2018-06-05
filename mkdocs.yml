@@ -1,12 +1,12 @@
 # Project information
 site_name: Active Workspace Extensions
-site_description: Customize Active Workspce with Extensions
+site_description: Customize Active Workspce With Extensions
 site_author: Siemens
 site_url: https://activeworkspaceextensions.github.io/
 
 # Repository
-repo_name: ActiveWorkspaceExtensions/AW-Docs-Site
-repo_url: https://github.com/ActiveWorkspaceExtensions/AW-Docs-Site
+repo_name: ActiveWorkspaceExtensions/
+repo_url: https://github.com/ActiveWorkspaceExtensions/
 edit_uri: ""
 
 # Copyright
