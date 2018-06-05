@@ -12,9 +12,11 @@ Visual Studio Code has support for the JavaScript and TypeScript languages out-o
 
 To get started in this walkthrough, [install Node.js for your platform](https://nodejs.org/en/download/). The Node Package Manager is included in the Node.js distribution. You'll need to open a new terminal (command prompt) for the `node` and `npm` command line tools to be on your PATH.
 
->**Linux**: There are specific Node.js packages available for the various flavors of Linux. See [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager) to find the Node.js package and installation instructions tailored to your version of Linux.
+!!! note
+    **Linux**: There are specific Node.js packages available for the various flavors of Linux. See [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager) to find the Node.js package and installation instructions tailored to your version of Linux.
 
->**Tip:** To test that you've got Node.js correctly installed on your computer, open a new terminal and type `node --help` and you should see the usage documentation.
+!!! tip
+    To test that you've got Node.js correctly installed on your computer, open a new terminal and type `node --help` and you should see the usage documentation.
 
 ## Node.js Hello World
 
@@ -28,7 +30,8 @@ cd hello
 code .
 ```
 
->**Tip:** You can open files or folders directly from the command line.  The period '.' refers to the current folder, therefore VS Code will start and open the `Hello` folder.
+!!! tip
+    You can open files or folders directly from the command line.  The period '.' refers to the current folder, therefore VS Code will start and open the `Hello` folder.
 
 From the File Explorer tool bar, press the New File button:
 
@@ -79,7 +82,8 @@ VS Code has an [integrated terminal](https://code.visualstudio.com/docs/editor/i
 
 [Express](https://expressjs.com/) is a very popular application framework for building and running Node.js applications. You can scaffold (create) a new Express application using the Express Generator tool. The Express Generator is shipped as an NPM module and installed by using the NPM command line tool `npm`. We use Express to create a local server run on your computer. This lets you view Active Workspace with your changes as you are working on it, before you put it in production.
 
->**Tip:** To test that you've got `npm` correctly installed on your computer, type `npm --help` from a terminal and you should see the usage documentation.
+!!! tip
+    To test that you've got `npm` correctly installed on your computer, type `npm --help` from a terminal and you should see the usage documentation.
 
 Install the Express Generator by running the following from a terminal:
 
@@ -99,7 +103,7 @@ Now that we have that installed, we need to set our JAVA_HOME path, so the scrip
 
  - Right click My Computer and select Properties.
  - On the Advanced tab, select Environment Variables ![Environment shot 1](env_1.png)
- - and then edit JAVA_HOME to point to where the JDK software is located, for example, C:\Program Files\Java\1.7.0_17.![Environment shot 1](env_2.png)
+ - Then edit JAVA_HOME to point to where the JDK software is located, for example, C:\Program Files\Java\1.7.0_17.![Environment shot 1](env_2.png)
 
 If you have any issues, Oracle has an article on [Installing the JDK Software and Setting JAVA_HOME](https://docs.oracle.com/cd/E19182-01/821-0917/inst_jdk_javahome_t/index.html)
 
