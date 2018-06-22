@@ -114,7 +114,7 @@ pip install mkdocs-material
 ```
 
 ## Additional Extension Installs
-These should be added when you install Material, but just to be on the safe side use pip to install `pymdown-extentions` and `pygments`.
+These should be added when you install Material, but just to be on the safe side use pip to install `pymdown-extentions`,`pygments` and `fontawesome-markdown`.
 
 ``` sh
 pip install pymdown-extensions
@@ -122,6 +122,10 @@ pip install pymdown-extensions
 
 ``` sh
 pip install pygments
+```
+
+``` sh
+pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 ```
 
 
