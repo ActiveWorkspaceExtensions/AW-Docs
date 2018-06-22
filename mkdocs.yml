@@ -74,6 +74,7 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
   - fontawesome_markdown
+  - attr_list
 
 # Overrides
 extra_css:
