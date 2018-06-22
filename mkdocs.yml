@@ -90,8 +90,8 @@ pages:
   - Examples:
     - Location Example: Location-Example/Location-Example.md
   - Extensions:
-    - InboxLinkcmdGlobal: InboxLinkcmdGlobal/InboxLinkcmdGlobal.md
     - HomeFolderLinkcmdGlobal: HomeFolderLinkcmdGlobal/HomeFolderLinkcmdGlobal.md
+    - InboxLinkcmdGlobal: InboxLinkcmdGlobal/InboxLinkcmdGlobal.md
     - QuickLinksCmdPanel: QuickLinksCmdPanel/QuickLinksCmdPanel.md
   - Docs:
     - What is Declarative: What-is-Declarative/What-is-Declarative.md  
