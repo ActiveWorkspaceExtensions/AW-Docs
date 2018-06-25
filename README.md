@@ -148,7 +148,7 @@ Open up `http://127.0.0.1:8000/` in your browser, and you'll see the Active Work
 
 ## How To Work In MKDOCS
 There's a single configuration file named `mkdocs.yml`, and a folder named
-`docs` that will contain your documentation source files. The folder named `site` is the built site that needs to be commited to the [ActiveWorkspaceExtensions.github.io](https://github.com/ActiveWorkspaceExtensions/ActiveWorkspaceExtensions.github.io) repo.
+`docs` that will contain your documentation source files.
 
 New pages go in their own folder in the `docs` directory. Add images in the page directory. An example would be `![cool image](image.png)`. 
 
@@ -190,7 +190,7 @@ documentation. First build the documentation:
 mkdocs build
 ```
 
-This will build the site in the `ActiveWorkspaceExtensions.github.io/` directory in the same folder as your `AW-Docs` project.
+This will build the site in the `ActiveWorkspaceExtensions.github.io/` directory in the same folder as your `AW-Docs` project. This needs to be commited to the [ActiveWorkspaceExtensions.github.io](https://github.com/ActiveWorkspaceExtensions/ActiveWorkspaceExtensions.github.io) repo for the changes to appear on the site.
 
 After some time, files may be removed from the documentation but they will still
 reside in the `site` directory. To remove those stale files, just run `mkdocs`
