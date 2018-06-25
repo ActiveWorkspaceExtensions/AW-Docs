@@ -176,9 +176,9 @@ pages:
 
 >#### Note on Directory Structure Build Directories
 >When AW-Docs is built, it will try to make it easier to publish the site by adding the build files to the ```ActiveWorkspaceExtensions.github.io/``` directory, as long as it is in the same directory as ```AW-Docs```:
-    
+>    
 >It is recommended that you also clone the site directory:
->   ```bash
+>   ```console
 >    GitHub/
 >    ├── ActiveWorkspaceExtensions.github.io/
 >    ├── AW-Docs/
