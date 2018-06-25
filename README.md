@@ -190,7 +190,7 @@ documentation. First build the documentation:
 mkdocs build
 ```
 
-This will create a new directory, named `site`.
+This will build the site in the `ActiveWorkspaceExtensions.github.io/` directory in the same folder as your `AW-Docs` project.
 
 After some time, files may be removed from the documentation but they will still
 reside in the `site` directory. To remove those stale files, just run `mkdocs`
