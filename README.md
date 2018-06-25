@@ -33,18 +33,12 @@ recommended version for your operating system.
 
 ## Installing Python
 
-Install [Python] by downloading an installer appropriate for your system from
-[python.org] and running it.
+Install [Python](https://www.python.org/downloads/) by downloading an installer appropriate for your system from
+[python.org](https://www.python.org/downloads/) and running it.
 
-!!! Note
-
-    If you are installing Python on Windows, be sure to check the box to have
-    Python added to your PATH if the installer offers such an option (it's
-    normally off by default).
-
-    ![Add Python to PATH](img/win-py-install.png)
-
-[python.org]: https://www.python.org/downloads/
+>If you are installing Python on Windows, be sure to check the box to have Python added to your PATH if the installer offers such an option (it's normally off by default).
+>
+>![Add Python to PATH](win-py-install.png)
 
 ## Installing pip
 
