@@ -53,7 +53,7 @@ pip install --upgrade pip
 If you need to install [pip] for the first time, download [get-pip.py].
 Then run the following command to install it:
 
-```bash
+```console
 python get-pip.py
 ```
 
@@ -61,14 +61,14 @@ python get-pip.py
 
 Install the `mkdocs` package using pip:
 
-```bash
+```console
 pip install mkdocs
 ```
 
 You should now have the `mkdocs` command installed on your system. Run `mkdocs
 --version` to check that everything worked okay.
 
-```bash
+```console
 $ mkdocs --version
 mkdocs, version 0.15.3
 ```
@@ -76,7 +76,7 @@ mkdocs, version 0.15.3
 
 >If you are using Windows, some of the above commands may not work out-of-the-box. A quick solution may be to preface every Python command with `python -m` like this:
 > 
-> ```
+> ```console
 > python -m pip install mkdocs
 > python -m mkdocs
 >```
@@ -98,22 +98,22 @@ clicking on it. Alternatively, you can [download](https://svn.python.org/project
 
 Material can be installed with `pip`:
 
-``` sh
+```console
 pip install mkdocs-material
 ```
 
 ## Additional Extension Installs
 These should be added when you install Material, but just to be on the safe side use pip to install `pymdown-extentions`,`pygments` and `fontawesome-markdown`.
 
-``` sh
+```console
 pip install pymdown-extensions
 ```
 
-``` sh
+```console
 pip install pygments
 ```
 
-``` sh
+```console
 pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 ```
 
@@ -135,7 +135,7 @@ as you work on it. Make sure you're in the same directory as the `mkdocs.yml`
 configuration file, and then start the server by running the `mkdocs serve`
 command:
 
-```bash
+```console
 $ mkdocs serve
 INFO    -  Building documentation...
 INFO    -  Cleaning site directory
@@ -187,7 +187,7 @@ pages:
 That's looking good. You're ready to deploy the first pass of your `MkLorum`
 documentation. First build the documentation:
 
-```bash
+```console
 mkdocs build
 ```
 
@@ -197,7 +197,7 @@ After some time, files may be removed from the documentation but they will still
 reside in the `site` directory. To remove those stale files, just run `mkdocs`
 with the `--clean` switch.
 
-```bash
+```console
 mkdocs build --clean
 ```
 
@@ -206,7 +206,7 @@ mkdocs build --clean
 There are various other commands and options available. For a complete list of
 commands, use the `--help` flag:
 
-```bash
+```console
 mkdocs --help
 ```
 
@@ -214,7 +214,7 @@ To view a list of options available on a given command, use the `--help` flag
 with that command. For example, to get a list of all options available for the
 `build` command run the following:
 
-```bash
+```console
 mkdocs build --help
 ```
 
