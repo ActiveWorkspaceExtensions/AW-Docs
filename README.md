@@ -150,7 +150,7 @@ Open up `http://127.0.0.1:8000/` in your browser, and you'll see the Active Work
 There's a single configuration file named `mkdocs.yml`, and a folder named
 `docs` that will contain your documentation source files. The folder named `site` is the built site that needs to be commited to the [ActiveWorkspaceExtensions.github.io](https://github.com/ActiveWorkspaceExtensions/ActiveWorkspaceExtensions.github.io) repo.
 
-New pages go in their own folder in the `docs` directory. Add images in the page directory. An example would be `![express.js file](expressjs.png)`. 
+New pages go in their own folder in the `docs` directory. Add images in the page directory. An example would be `![cool image](image.png)`. 
 
 Add pages the same fashion as the other pages in the `mkdocs.yml` file:
 
