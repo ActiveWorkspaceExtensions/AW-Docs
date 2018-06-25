@@ -57,12 +57,12 @@ So here we can see the action type as a `JSFunction`. This calls a JavaScript fu
                 "deps": "soa/dataManagementService",
 ```
  
-So now we know the method and the file its located in so we can find its inputs 
+So now we know the method and the file its located in so we can find its inputs: 
 
 ``` javascript
 exports.getProperties = function( uids, propNames ) 
 ```
-So the inputs are `uids` and `propNames` for the uids.  We can provide that in the json as well:
+So the inputs are `uids` and `propNames` for the uids.  We can provide that in the JSON as well:
 
 ``` json
 "inputData": {
@@ -76,9 +76,9 @@ So the inputs are `uids` and `propNames` for the uids.  We can provide that in t
 ```
 
  
-We know the home folder property is a typedReference on the user object so getting the uid for that should be simple.  The input for uids should be the user uid which we can get through ctx like like shown above with ctx.user.uid.  We can easily see the ctx data if we run window._jsniInjector.service('appCtxService').ctx or download the available chrome dev tools for declarative(Link to the chrome dev tools if available or remove this).  The property on the user object we want is a TypedReference which will return the UID of the typedReference object, on the User object that property is home_folder like above.
+A reference type is a data type that refers to an object in memory. We know the home folder property is a typedReference on the user object. Getting the uid for that should be simple. The input for uids should be the user uid. We can get that through ctx just as we did above with ctx.user.uid.  We can easily see the ctx data if we run `window._jsniInjector.service('appCtxService').ctx`. The property on the user object we want is a typedReference which will return the UID of the typedReference object. On the User object that property is home_folder like above.
 
-Now that all of the inputs are solid we need to handle the output of the data and put it in a position for easy access when we build the url for the link.
+Now that all of the inputs are solid we need to handle the output of the data, and put it in a position for easy access when we build the url for the link.
 
 ``` json
 "outputData": {
@@ -86,7 +86,7 @@ Now that all of the inputs are solid we need to handle the output of the data an
                 },
 ```
  
-Here we are going to take the output of the method above and create our own ctx.user.<something> that we can access when we click the link.  
+Here we are going to take the output of the method above and create our own `ctx.user.<something>` that we can access when we click the link.  
 
 ``` json
 "dataParseDefinitions": {
@@ -98,9 +98,9 @@ Here we are going to take the output of the method above and create our own ctx.
         }
 ```
  
-So from above in outputData we defined a dataParseDefinition to call which is updateUserCtxForHomeFolder.  This dataParseDefinitions is taking the output format which will be a ViewModelObject from the typedReference home_folder property from the User object above and we are going to create that property under ctx.user so we have access to it.  The dataInput here is from the service return since we know there is only 1 object that should be returned here.  
+So from above in outputData we defined a `dataParseDefinition` to call which is `updateUserCtxForHomeFolder`. This `dataParseDefinitions` is taking the output format which will be a `ViewModelObject`. We git this from the typedReference `home_folder` property from the User object above. And, we are going to create that property under `ctx.user` so we have access to it. The `dataInput` here is from the service return since we know there is only 1 object that should be returned here.  
 
-Now that we have finished the service call and had a success with our return and updated a property on ctx.user so we have access to the home folder UID we can call a new action to generate the link:
+We now a have finished the service call, a success with our return, and updated a property on ctx.user. We now have access to the home folder UID. We can now make an event action to make the link. This event is just going to call an action `showHomeFolderLink`:
 
 ``` json
 "onEvent": [{
@@ -109,7 +109,7 @@ Now that we have finished the service call and had a success with our return and
         }],
 ```
  
-This event occurs from the initial action ‘activateHomeFolderLinkcmdGlobal’ success.  So as long as the service and the ctx.user update is successful then we will call the event showHomeFolderLink:
+This event occurs from the initial action `activateHomeFolderLinkcmdGlobal` success. As long as the service and the ctx.user update are successful, then we will call the event `showHomeFolderLink`:
 
 ``` json
 "showHomeFolderLink": {
@@ -122,9 +122,9 @@ This event occurs from the initial action ‘activateHomeFolderLinkcmdGlobal’ 
                 }
             }
 ```
- 
-This event is just going to call an action showHomeFolderLink:
- 
-In AW 4.0 there is a new actionType.  This actionType is  called Navigate which can help replace any javascript code that generates and executes a URL in the same tab.  The attributes are populated to determine where in AW you want to send the user.  For this example we are going to send them to showObject location which is the com_siemens_splm_clientfx_tcui_xrt_showObject above.  There are parameters we can apply to this as well since showObject has a UID.  From earlier we looked at how this is updating ctx.user props to allow us to use it later, this is where we use it.  The uid in navigationParams can be set based on what we did earlier, ctx.user.props.home_folder.dbValues[0] is now the uid of the users home_folder which we need to generate the URL.  cmdID and cmdArg are used for tiles actually in the values you can generate there.  For this example we can ignore them.
+
+In AW 4.0 there is a new `actionType`. This actionType is called `Navigate` which can help replace any javascript code that generates and executes a URL in the same tab. The attributes are populated to determine where in AW you want to send the user. For this example we are going to send them to showObject location which is the `com_siemens_splm_clientfx_tcui_xrt_showObject` above. There are parameters we can apply to this as well, since `showObject` has a UID. From earlier we looked at how this is updating the `ctx.user` props to allow us to use it later. This is where we use it.  The uid in `navigationParams` can be set based on what we did earlier. `ctx.user.props.home_folder.dbValues[0]` is now the uid of the users `home_folder` which we need to generate the URL.  `cmdID` and `cmdArg` are used for tiles actually in the values you can generate there.  For this example we can ignore them.
 
 In the end here is what the final product does:
+
+## Add Image Here
