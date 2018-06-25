@@ -1,8 +1,8 @@
 # HomeFolderLinkcmdGlobal Extension
 
-## Visual Studio Code
-
 [Download the extension from GitHub :fa-github:](https://github.com/ActiveWorkspaceExtensions/HomeFolderLinkcmdGlobal)
+
+## What This Extention Does
 
 !!! info "This tutorial example is for Active Workspace 4.0"
 
