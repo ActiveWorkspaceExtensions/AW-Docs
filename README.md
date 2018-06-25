@@ -38,7 +38,7 @@ Install [Python](https://www.python.org/downloads/) by downloading an installer 
 
 >If you are installing Python on Windows, be sure to check the box to have Python added to your PATH if the installer offers such an option (it's normally off by default).
 >
->![Add Python to PATH](win-py-install.png)
+>![Add Python to PATH](docs/images/win-py-install.png)
 
 ## Installing pip
 
