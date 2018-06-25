@@ -9,13 +9,15 @@ repo_name: ActiveWorkspaceExtensions/
 repo_url: https://github.com/ActiveWorkspaceExtensions/
 edit_uri: ""
 
+# Build Directory
+site_dir: ../ActiveWorkspaceExtensions.github.io/
+
 # Copyright
 copyright: 'Copyright &copy; 2018 Siemens'
 
 # Configuration
 theme:
   name: material
-
 
  # Don't include MkDocs' JavaScript
   include_search_page: false
