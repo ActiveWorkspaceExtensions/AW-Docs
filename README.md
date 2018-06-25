@@ -11,7 +11,7 @@ Open a terminal window. We are big fans of VS Code. It has a terminal built in! 
 [terminal instructions for Windows users](https://www.quora.com/How-do-I-open-terminal-in-windows). 
 
 Let's check to see if you have the following installed. Follow the list to check if if it is install and then what version you have:
-```bash
+```console
 # Check Node
 $ node --version
 v8.11.1
@@ -52,7 +52,7 @@ If you're using a recent version of Python, the Python package manager, [pip],
 is most likely installed by default. However, you may need to upgrade pip to the
 lasted version:
 
-```bash
+```console
 pip install --upgrade pip
 ```
 
@@ -79,25 +79,20 @@ $ mkdocs --version
 mkdocs, version 0.15.3
 ```
 
-!!! Note
-    If you are using Windows, some of the above commands may not work
-    out-of-the-box.
 
-    A quick solution may be to preface every Python command with `python -m`
-    like this:
-
-        python -m pip install mkdocs
-        python -m mkdocs
-
-    For a more permanent solution, you may need to edit your `PATH` environment
-    variable to include the `Scripts` directory of your Python installation.
-    Recent versions of Python include a script to do this for you. Navigate to
-    your Python installation directory (for example `C:\Python34\`), open the
-    `Tools`, then `Scripts` folder, and run the `win_add2path.py` file by double
-    clicking on it. Alternatively, you can [download][a2p] the script and run it
-    (`python win_add2path.py`).
-
-[a2p]: https://svn.python.org/projects/python/trunk/Tools/scripts/win_add2path.py
+>If you are using Windows, some of the above commands may not work out-of-the-box. A quick solution may be to preface every Python command with `python -m` like this:
+> 
+> ```
+> python -m pip install mkdocs
+> python -m mkdocs
+>```
+>For a more permanent solution, you may need to edit your `PATH` environment
+variable to include the `Scripts` directory of your Python installation.
+Recent versions of Python include a script to do this for you. Navigate to
+your Python installation directory (for example `C:\Python34\`), open the
+`Tools`, then `Scripts` folder, and run the `win_add2path.py` file by double
+clicking on it. Alternatively, you can [download](https://svn.python.org/projects/python/trunk/Tools/scripts/win_add2path.py) the script and run it
+(`python win_add2path.py`).
 
 ---
 
@@ -140,7 +135,6 @@ You can also clone the repo from the GitHub Desktop App.
 
 Open the directory ```AW-Docs-Site``` in your terminal.
 
-
 ## Now the Fun Part
 MkDocs comes with a built-in dev-server that lets you preview your documentation
 as you work on it. Make sure you're in the same directory as the `mkdocs.yml`
@@ -166,9 +160,35 @@ New pages go in their own folder in the `docs` directory. Add images in the page
 
 Add pages the same fashion as the other pages in the `mkdocs.yml` file:
 
-![pages](pages.jpg)
+```yml
+# Pages
+pages:
+  - Home: index.md
+  - Getting Started: 
+    - Environment Setup: Getting-Started/Environment-Setup/Environment-Setup.md
+    - My First Extension: Getting-Started/My-First-Extension/My-First-Extension.md
+  - Docs:
+    - What is Declarative: Documentation/What-is-Declarative/What-is-Declarative.md
+    - Examples:
+      - Location Example: Documentation/Examples/Location-Example/Location-Example.md
+  - Extensions:
+    - HomeFolderLinkcmdGlobal: Extensions/HomeFolderLinkcmdGlobal/HomeFolderLinkcmdGlobal.md
+    - InboxLinkcmdGlobal: Extensions/InboxLinkcmdGlobal/InboxLinkcmdGlobal.md
+    - QuickLinksCmdPanel: Extensions/QuickLinksCmdPanel/QuickLinksCmdPanel.md
+    - at4Create: Extensions/at4Create/at4Create.md
+```
 
 ## Building the site
+
+>#### Note on Directory Structure Build Directories
+>When AW-Docs is built, it will try to make it easier to publish the site by adding the build files to the ```ActiveWorkspaceExtensions.github.io/``` directory, as long as it is in the same directory as ```AW-Docs```:
+    
+>It is recommended that you also clone the site directory:
+>   ```console
+>    GitHub/
+>    ├── ActiveWorkspaceExtensions.github.io/
+>    ├── AW-Docs/
+>     ```
 
 That's looking good. You're ready to deploy the first pass of your `MkLorum`
 documentation. First build the documentation:
