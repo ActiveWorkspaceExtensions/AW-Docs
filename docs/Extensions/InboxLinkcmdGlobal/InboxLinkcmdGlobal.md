@@ -95,7 +95,7 @@ This part of the `module.json` file goes through the view model commands. For th
 
 ## Command Handler
 
-The command 
+The command handler manages actions from commands. This is a good example of a fairly straight forward one. By clicking on the `InboxLinkCmdGlobal`, it triggers an action `activateInboxLinkCmdGlobal`.
 
 ```json
 "commandHandlers": {
@@ -108,6 +108,46 @@ The command
         },
 ```
 
+## Command Placement
+This tells Active Workspace where to place the command.
+
+```json
+"commandPlacements": {
+            "InboxLinkCmdGlobalaw_globalToolbar": {
+                "id": "InboxLinkCmdGlobal",
+                "uiAnchor": "aw_globalToolbar",
+                "priority": 100
+            }
+        },
+```
+
+## Action
+This sets up the action that we were calling above. The `activateInboxLinkCmdGlobal` action uses s JavaScript function found in `js/InboxLinkCmdGlobalService` to call a mathod named `go`. I passes in a location and a user id.
+
+```json
+"actions": {
+            "activateInboxLinkCmdGlobal": {
+                "actionType": "JSFunction",
+                "method": "go",
+                "deps": "js/InboxLinkCmdGlobalService",
+                "inputData": {
+                    "location": "#/teamTasks",
+                    "userUID": ""
+                }
+            }
+        },
+```
+
+## Messages
+This last piece tells Active Workspace where to find all of the copy for the titles, messages, etc.
+
+```json
+"i18n": {
+            "InboxLinkCmdGlobalTitle": [
+                "InboxLinkcmdGlobalMessages"
+            ]
+        }
+```
 
 
 
