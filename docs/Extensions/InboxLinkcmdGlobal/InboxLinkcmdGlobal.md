@@ -149,7 +149,8 @@ This last piece tells Active Workspace where to find all of the copy for the tit
         }
 ```
 
-
+----
+-----
 
 
 The first part, `com.siemens.splm.clientfx.tcui.xrt.showObject`, is the location being used. This location needs a uid input to display whatever object needs to be displayed though. The UID for my home folder is the `gofF7D0qqd$DyB`. So how do we get that uid from the client? We need to use a service to find it.
