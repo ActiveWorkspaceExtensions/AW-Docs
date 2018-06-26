@@ -127,4 +127,4 @@ In AW 4.0 there is a new `actionType`. This actionType is called `Navigate` whic
 
 In the end here is what the final product does:
 
-## Add Image Here
+![FGlobal Header](homeLink.gif "End Product"){: .shadow}

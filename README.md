@@ -11,7 +11,7 @@ Open a terminal window. We are big fans of VS Code. It has a terminal built in! 
 [terminal instructions for Windows users](https://www.quora.com/How-do-I-open-terminal-in-windows). 
 
 Let's check to see if you have the following installed. Follow the list to check if if it is install and then what version you have:
-```bash
+```console
 # Check Node
 $ node --version
 v8.11.1
@@ -33,18 +33,12 @@ recommended version for your operating system.
 
 ## Installing Python
 
-Install [Python] by downloading an installer appropriate for your system from
-[python.org] and running it.
+Install [Python](https://www.python.org/downloads/) by downloading an installer appropriate for your system from
+[python.org](https://www.python.org/downloads/) and running it.
 
-!!! Note
-
-    If you are installing Python on Windows, be sure to check the box to have
-    Python added to your PATH if the installer offers such an option (it's
-    normally off by default).
-
-    ![Add Python to PATH](img/win-py-install.png)
-
-[python.org]: https://www.python.org/downloads/
+>If you are installing Python on Windows, be sure to check the box to have Python added to your PATH if the installer offers such an option (it's normally off by default).
+>
+>![Add Python to PATH](docs/images/win-py-install.png)
 
 ## Installing pip
 
@@ -52,14 +46,14 @@ If you're using a recent version of Python, the Python package manager, [pip],
 is most likely installed by default. However, you may need to upgrade pip to the
 lasted version:
 
-```bash
+```console
 pip install --upgrade pip
 ```
 
 If you need to install [pip] for the first time, download [get-pip.py].
 Then run the following command to install it:
 
-```bash
+```console
 python get-pip.py
 ```
 
@@ -67,37 +61,32 @@ python get-pip.py
 
 Install the `mkdocs` package using pip:
 
-```bash
+```console
 pip install mkdocs
 ```
 
 You should now have the `mkdocs` command installed on your system. Run `mkdocs
 --version` to check that everything worked okay.
 
-```bash
+```console
 $ mkdocs --version
 mkdocs, version 0.15.3
 ```
 
-!!! Note
-    If you are using Windows, some of the above commands may not work
-    out-of-the-box.
 
-    A quick solution may be to preface every Python command with `python -m`
-    like this:
-
-        python -m pip install mkdocs
-        python -m mkdocs
-
-    For a more permanent solution, you may need to edit your `PATH` environment
-    variable to include the `Scripts` directory of your Python installation.
-    Recent versions of Python include a script to do this for you. Navigate to
-    your Python installation directory (for example `C:\Python34\`), open the
-    `Tools`, then `Scripts` folder, and run the `win_add2path.py` file by double
-    clicking on it. Alternatively, you can [download][a2p] the script and run it
-    (`python win_add2path.py`).
-
-[a2p]: https://svn.python.org/projects/python/trunk/Tools/scripts/win_add2path.py
+>If you are using Windows, some of the above commands may not work out-of-the-box. A quick solution may be to preface every Python command with `python -m` like this:
+> 
+> ```console
+> python -m pip install mkdocs
+> python -m mkdocs
+>```
+>For a more permanent solution, you may need to edit your `PATH` environment
+variable to include the `Scripts` directory of your Python installation.
+Recent versions of Python include a script to do this for you. Navigate to
+your Python installation directory (for example `C:\Python34\`), open the
+`Tools`, then `Scripts` folder, and run the `win_add2path.py` file by double
+clicking on it. Alternatively, you can [download](https://svn.python.org/projects/python/trunk/Tools/scripts/win_add2path.py) the script and run it
+(`python win_add2path.py`).
 
 ---
 
@@ -109,22 +98,22 @@ mkdocs, version 0.15.3
 
 Material can be installed with `pip`:
 
-``` sh
+```console
 pip install mkdocs-material
 ```
 
 ## Additional Extension Installs
 These should be added when you install Material, but just to be on the safe side use pip to install `pymdown-extentions`,`pygments` and `fontawesome-markdown`.
 
-``` sh
+```console
 pip install pymdown-extensions
 ```
 
-``` sh
+```console
 pip install pygments
 ```
 
-``` sh
+```console
 pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 ```
 
@@ -140,14 +129,13 @@ You can also clone the repo from the GitHub Desktop App.
 
 Open the directory ```AW-Docs-Site``` in your terminal.
 
-
 ## Now the Fun Part
 MkDocs comes with a built-in dev-server that lets you preview your documentation
 as you work on it. Make sure you're in the same directory as the `mkdocs.yml`
 configuration file, and then start the server by running the `mkdocs serve`
 command:
 
-```bash
+```console
 $ mkdocs serve
 INFO    -  Building documentation...
 INFO    -  Cleaning site directory
@@ -160,30 +148,55 @@ Open up `http://127.0.0.1:8000/` in your browser, and you'll see the Active Work
 
 ## How To Work In MKDOCS
 There's a single configuration file named `mkdocs.yml`, and a folder named
-`docs` that will contain your documentation source files. The folder named `site` is the built site that needs to be commited to the [ActiveWorkspaceExtensions.github.io](https://github.com/ActiveWorkspaceExtensions/ActiveWorkspaceExtensions.github.io) repo.
+`docs` that will contain your documentation source files.
 
-New pages go in their own folder in the `docs` directory. Add images in the page directory. An example would be `![express.js file](expressjs.png)`. 
+New pages go in their own folder in the `docs` directory. Add images in the page directory. An example would be `![cool image](image.png)`. 
 
 Add pages the same fashion as the other pages in the `mkdocs.yml` file:
 
-![pages](pages.jpg)
+```yml
+# Pages
+pages:
+  - Home: index.md
+  - Getting Started: 
+    - Environment Setup: Getting-Started/Environment-Setup/Environment-Setup.md
+    - My First Extension: Getting-Started/My-First-Extension/My-First-Extension.md
+  - Docs:
+    - What is Declarative: Documentation/What-is-Declarative/What-is-Declarative.md
+    - Examples:
+      - Location Example: Documentation/Examples/Location-Example/Location-Example.md
+  - Extensions:
+    - HomeFolderLinkcmdGlobal: Extensions/HomeFolderLinkcmdGlobal/HomeFolderLinkcmdGlobal.md
+    - InboxLinkcmdGlobal: Extensions/InboxLinkcmdGlobal/InboxLinkcmdGlobal.md
+    - QuickLinksCmdPanel: Extensions/QuickLinksCmdPanel/QuickLinksCmdPanel.md
+    - at4Create: Extensions/at4Create/at4Create.md
+```
 
 ## Building the site
+
+>#### Note on Directory Structure Build Directories
+>When AW-Docs is built, it will try to make it easier to publish the site by adding the build files to the ```ActiveWorkspaceExtensions.github.io/``` directory, as long as it is in the same directory as ```AW-Docs```:
+>    
+>It is recommended that you also clone the site directory:
+>   ```console
+>    GitHub/
+>    ├── ActiveWorkspaceExtensions.github.io/
+>    ├── AW-Docs/
 
 That's looking good. You're ready to deploy the first pass of your `MkLorum`
 documentation. First build the documentation:
 
-```bash
+```console
 mkdocs build
 ```
 
-This will create a new directory, named `site`.
+This will build the site in the `ActiveWorkspaceExtensions.github.io/` directory in the same folder as your `AW-Docs` project. This needs to be commited to the [ActiveWorkspaceExtensions.github.io](https://github.com/ActiveWorkspaceExtensions/ActiveWorkspaceExtensions.github.io) repo for the changes to appear on the site.
 
 After some time, files may be removed from the documentation but they will still
 reside in the `site` directory. To remove those stale files, just run `mkdocs`
 with the `--clean` switch.
 
-```bash
+```console
 mkdocs build --clean
 ```
 
@@ -192,7 +205,7 @@ mkdocs build --clean
 There are various other commands and options available. For a complete list of
 commands, use the `--help` flag:
 
-```bash
+```console
 mkdocs --help
 ```
 
@@ -200,7 +213,7 @@ To view a list of options available on a given command, use the `--help` flag
 with that command. For example, to get a list of all options available for the
 `build` command run the following:
 
-```bash
+```console
 mkdocs build --help
 ```
 
