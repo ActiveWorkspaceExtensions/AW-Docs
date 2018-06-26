@@ -2,7 +2,7 @@
 
 [Download the extension from GitHub :fa-github:](https://github.com/ActiveWorkspaceExtensions/HomeFolderLinkcmdGlobal)
 
-## What This Extention Does
+## What This Extension Does
 
 !!! info "This tutorial example is for Active Workspace 4.0"
 
@@ -11,7 +11,7 @@ The global command bar in active workspace allows for generic links to be made t
 ![FGlobal Header](globalHeader.jpg "Global Header"){: .shadow}
 
 The HomeFolderLinkcmdGlobal extension does just this. Instead of having to click home then home folder, this module places a home folder command in the global toolbar. The command will take any user to their home folder, no matter where they are in the client.  
-
+## How to Use JavaScript and Services
 The example also shows how to use JavaScript and services to get information required to build the url for the home folder. The home folder itself is just a URl constructed based upon the users home folder UID. The location is just a `showObject` location. An example would be something like this:
 
 ```javascript
@@ -20,6 +20,7 @@ com.siemens.splm.clientfx.tcui.xrt.showObject?s_uid=gofF7D0qqd$DyB&uid=gofF7D0qq
 
 The first part, `com.siemens.splm.clientfx.tcui.xrt.showObject`, is the location being used. This location needs a uid input to display whatever object needs to be displayed though. The UID for my home folder is the `gofF7D0qqd$DyB`. So how do we get that uid from the client? We need to use a service to find it.
 
+## Actions
 Inside of the module.json you will find the actions associated with this command. The action `activateHomeFolderLinkcmdGlobal` is actually a service being called from some javascript.
 
 ``` json
@@ -86,6 +87,7 @@ Now that all of the inputs are solid we need to handle the output of the data, a
                 },
 ```
  
+## Data Parsing
 Here we are going to take the output of the method above and create our own `ctx.user.<something>` that we can access when we click the link.  
 
 ``` json
@@ -100,6 +102,7 @@ Here we are going to take the output of the method above and create our own `ctx
  
 So from above in outputData we defined a `dataParseDefinition` to call which is `updateUserCtxForHomeFolder`. This `dataParseDefinitions` is taking the output format which will be a `ViewModelObject`. We git this from the typedReference `home_folder` property from the User object above. And, we are going to create that property under `ctx.user` so we have access to it. The `dataInput` here is from the service return since we know there is only 1 object that should be returned here.  
 
+## Events
 We now a have finished the service call, a success with our return, and updated a property on ctx.user. We now have access to the home folder UID. We can now make an event action to make the link. This event is just going to call an action `showHomeFolderLink`:
 
 ``` json
@@ -124,6 +127,8 @@ This event occurs from the initial action `activateHomeFolderLinkcmdGlobal` succ
 ```
 
 In AW 4.0 there is a new `actionType`. This actionType is called `Navigate` which can help replace any javascript code that generates and executes a URL in the same tab. The attributes are populated to determine where in AW you want to send the user. For this example we are going to send them to showObject location which is the `com_siemens_splm_clientfx_tcui_xrt_showObject` above. There are parameters we can apply to this as well, since `showObject` has a UID. From earlier we looked at how this is updating the `ctx.user` props to allow us to use it later. This is where we use it.  The uid in `navigationParams` can be set based on what we did earlier. `ctx.user.props.home_folder.dbValues[0]` is now the uid of the users `home_folder` which we need to generate the URL.  `cmdID` and `cmdArg` are used for tiles actually in the values you can generate there.  For this example we can ignore them.
+
+## End Product
 
 In the end here is what the final product does:
 
