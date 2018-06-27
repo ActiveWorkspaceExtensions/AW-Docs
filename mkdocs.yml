@@ -96,7 +96,6 @@ pages:
   - Extensions:
     - HomeFolderLinkcmdGlobal: Extensions/HomeFolderLinkcmdGlobal/HomeFolderLinkcmdGlobal.md
     - InboxLinkcmdGlobal: Extensions/InboxLinkcmdGlobal/InboxLinkcmdGlobal.md
-    - QuickLinksCmdPanel: Extensions/QuickLinksCmdPanel/QuickLinksCmdPanel.md
     - at4Create: Extensions/at4Create/at4Create.md
     
 
