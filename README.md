@@ -1,7 +1,6 @@
 # Active Workspace Extentions Docs Starter
 
-### ! Important - The Framework has been upgraded. Please upgrade `mkdocs-material` and `pymdown-extensions`.
-
+> **! Important - The Framework has been upgraded. Please upgrade `mkdocs-material` and `pymdown-extensions`.**
 > The framework has been upgraded to `mkdocs-material-2.9.1` and `pymdown-extensions-4.11`. The following commands will check your current version:
 > ```console
 > pip show mkdocs-material
