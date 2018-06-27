@@ -217,7 +217,19 @@ with that command. For example, to get a list of all options available for the
 mkdocs build --help
 ```
 
+## Upgrade
 
+Mkdocs-Material is in constant development. Check the [Release Notes](https://squidfunk.github.io/mkdocs-material/release-notes/) to make sure you have the most recent version if you are seeing issues. This command will check your current package version:
+
+``` Bash
+pip show mkdocs-material
+```
+
+Use this command to upgrade is needed:
+
+``` Bash
+ pip install mkdocs-material --upgrade
+```
 
 
 
