@@ -1,5 +1,18 @@
 # Active Workspace Extentions Docs Starter
 
+### ! Important - The Framework has been upgraded. Please upgrade `mkdocs-material` and `pymdown-extensions`.
+
+> The framework has been upgraded to `mkdocs-material-2.9.1` and `pymdown-extensions-4.11`. The following commands will check your current version:
+> ```console
+> pip show mkdocs-material
+> pip show pymdown-extensions
+> ```
+>These commands will upgrade if needed:
+> ```console
+> pip install mkdocs-material --upgrade
+> pip install pymdown-extensions --upgrade
+> ```
+
 # Getting started
 
 ## Check your development environment
@@ -221,13 +234,13 @@ mkdocs build --help
 
 Mkdocs-Material is in constant development. Check the [Release Notes](https://squidfunk.github.io/mkdocs-material/release-notes/) to make sure you have the most recent version if you are seeing issues. This command will check your current package version:
 
-``` Bash
+```console
 pip show mkdocs-material
 ```
 
 Use this command to upgrade is needed:
 
-``` Bash
+```console
  pip install mkdocs-material --upgrade
 ```
 
